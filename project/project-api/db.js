@@ -6,8 +6,8 @@ const { getDatabaseUri } = require("./config");
 
 require("colors");
 
-const db = new Pool({ connectionString: getDatabaseUri(),   ssl: {
-  rejectUnauthorized: false, }});
+const db = new Pool({ connectionString: getDatabaseUri(),   
+  ssl: {rejectUnauthorized: false, }});
 
 db.connect((err) => {
   if (err) {
